@@ -14,7 +14,8 @@ subtitle: "The (mis)adventures of a Python coder"
 email: gioia.ballin@codingnights.com
 name: Gioia Ballin
 description: >
-  A simple yet classy theme for your Jekyll website or blog.
+  The (mis)adventures of a Python coder: human feelings and programming subjects
+  reported with a unique frankness.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -72,38 +73,38 @@ descriptions:
 social:
   - name: Twitter
     icon: twitter
-    username: TheBenCentra
-    url: https://twitter.com/TheBenCentra
+    username: GioiaBallin
+    url: https://twitter.com/GioiaBallin
     desc: Follow me on Twitter
     share: true
 
   - name: Facebook
     icon: facebook
-    username: thebencentra
-    url:
+    username: gioia.ballin
+    url: https://www.facebook.com/gioia.ballin
     desc: Friend me on Facebook
     share: true
 
-  - name: GitHub
-    icon: github
-    username: bencentra
-    url: https://github.com/bencentra
-    desc: Fork me on GitHub
-    share: false
-
   - name: LinkedIn
     icon: linkedin
-    username: Ben Centra
-    url: https://www.linkedin.com/pub/ben-centra/47/769/60a
+    username: gioiaballin
+    url: https://www.linkedin.com/in/gioiaballin/en
     desc: Connect with me on LinkedIn
     share: true
 
   - name: Google+
     icon: google-plus
-    username:
-    url:
+    username: gioia.ballin
+    url: https://plus.google.com/108158390093603092684
     desc: Add me to your Circles
     share: true
+
+  - name: GitHub
+    icon: github
+    username: gioiab
+    url: https://github.com/gioiab
+    desc: Fork me on GitHub
+    share: false
 
   - name: YouTube
     icon: youtube

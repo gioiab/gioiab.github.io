@@ -37,15 +37,15 @@ $red:	#c0392b;				// Pomegranate
 $gray: #7f8c8d;				// Asbestos
 // Even more colors
 $bc-red: #bc0000;
-$dark-blue: #0e164e;
+$dark-blue: #091773;
 $light-blue: #2b73cd;
-$violet: #583dbb;
+$mid-gray: #888888;
 
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$action-color: $light-blue;
-$highlight-color: shade($action-color, 60%);
+$action-color: $dark-gray;
+$highlight-color: shade($action-color, 75%);
 
 // Border
 $base-border-color: $light-gray;

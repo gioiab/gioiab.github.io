@@ -8,7 +8,7 @@ button {
   -o-appearance: none;
   appearance: none;
   -webkit-font-smoothing: antialiased;
-  background-color: #2b73cd;
+  background-color: #333;
   border-radius: 3px;
   border: none;
   color: #fff;
@@ -26,7 +26,7 @@ button {
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   button:hover,
   button:focus {
-    background-color: #1e508e;
+    background-color: #0d0d0d;
     color: #fff; }
   button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
   button:disabled {
@@ -75,8 +75,8 @@ textarea {
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
   select[multiple=multiple]:focus,
   textarea:focus {
-    border-color: #2b73cd;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(39, 103, 184, 0.7);
+    border-color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(38, 38, 38, 0.7);
     outline: none; }
 
 textarea {
@@ -199,10 +199,10 @@ p {
   margin: 0 0 14.4px; }
 
 a {
-  color: #2b73cd;
+  color: #333;
   text-decoration: none; }
   a:active, a:focus, a:hover {
-    color: #225ba3;
+    color: #1a1a1a;
     text-decoration: underline; }
   a:active, a:focus {
     outline: none; }
@@ -277,7 +277,6 @@ pre code.hljs {
   text-align: center; }
   .site-header-container.has-cover, .post-header-container.has-cover {
     color: #fff;
-    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.67) !important;
     background-position: 50% 50%;
     background-size: cover; }
     .site-header-container.has-cover .title, .post-header-container.has-cover .title {
@@ -297,7 +296,7 @@ pre code.hljs {
 *	Header
 */
 .navigation {
-  box-shadow: 0 2px #112e52;
+  box-shadow: 0 1px #0d0d0d;
   padding: 0 1em;
   margin: 0;
   /*
@@ -543,7 +542,7 @@ pre code.hljs {
 */
 .site-footer {
   padding: 1em 1em 2em 1em;
-  background-color: #112e52;
+  background-color: #0d0d0d;
   color: #fff;
   /*
   *	Site Navigation (left)

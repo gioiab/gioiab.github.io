@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding Nights</title>
-    <description>A simple yet classy theme for your Jekyll website or blog.
+    <description>The (mis)adventures of a Python coder: human feelings and programming subjects reported with a unique frankness.
 </description>
     <link>http://codingnights.com/</link>
     <atom:link href="http://codingnights.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Oct 2016 22:49:11 +0200</pubDate>
-    <lastBuildDate>Sat, 08 Oct 2016 22:49:11 +0200</lastBuildDate>
+    <pubDate>Sat, 08 Oct 2016 23:42:48 +0200</pubDate>
+    <lastBuildDate>Sat, 08 Oct 2016 23:42:48 +0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
