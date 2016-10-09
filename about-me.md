@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About Me
-permalink: /about-me/
 ---
 
 Hi there! I'm Gioia Ballin and I'm a software developer, a blogger and a tech enthusiast. I love learning and experimenting new technologies as much as I love traveling and dancing.

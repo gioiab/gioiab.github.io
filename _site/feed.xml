@@ -6,12 +6,12 @@
 </description>
     <link>http://codingnights.com/</link>
     <atom:link href="http://codingnights.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Oct 2016 22:56:44 +0200</pubDate>
-    <lastBuildDate>Sun, 09 Oct 2016 22:56:44 +0200</lastBuildDate>
+    <pubDate>Sun, 09 Oct 2016 23:49:33 +0200</pubDate>
+    <lastBuildDate>Sun, 09 Oct 2016 23:49:33 +0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
+        <title>Building something from scratch</title>
         <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;h2 id=&quot;adding-new-posts&quot;&gt;Adding New Posts&lt;/h2&gt;
@@ -67,16 +67,16 @@ function demo(string, times) {
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://codingnights.com/jekyll/2015/04/18/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://codingnights.com/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
+        <pubDate>Sun, 22 Nov 2015 01:00:00 +0100</pubDate>
+        <link>http://codingnights.com/building-something-from-scratch/</link>
+        <guid isPermaLink="true">http://codingnights.com/building-something-from-scratch/</guid>
         
-        <category>jekyll</category>
-        
-        <category>welcome</category>
+        <category>blogging</category>
         
         
-        <category>Jekyll</category>
+        <category>life</category>
+        
+        <category>blogging</category>
         
       </item>
     
@@ -92,8 +92,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://codingnights.com/dummy/2015/04/18/dummy6.html</link>
-        <guid isPermaLink="true">http://codingnights.com/dummy/2015/04/18/dummy6.html</guid>
+        <link>http://codingnights.com/dummy6/</link>
+        <guid isPermaLink="true">http://codingnights.com/dummy6/</guid>
         
         <category>lorem</category>
         
@@ -116,8 +116,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://codingnights.com/dummy/2015/04/18/dummy5.html</link>
-        <guid isPermaLink="true">http://codingnights.com/dummy/2015/04/18/dummy5.html</guid>
+        <link>http://codingnights.com/dummy5/</link>
+        <guid isPermaLink="true">http://codingnights.com/dummy5/</guid>
         
         <category>lorem</category>
         
@@ -138,8 +138,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://codingnights.com/dummy/2015/04/18/dummy4.html</link>
-        <guid isPermaLink="true">http://codingnights.com/dummy/2015/04/18/dummy4.html</guid>
+        <link>http://codingnights.com/dummy4/</link>
+        <guid isPermaLink="true">http://codingnights.com/dummy4/</guid>
         
         <category>ipsum</category>
         
@@ -160,8 +160,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://codingnights.com/dummy/2015/04/18/dummy3.html</link>
-        <guid isPermaLink="true">http://codingnights.com/dummy/2015/04/18/dummy3.html</guid>
+        <link>http://codingnights.com/dummy3/</link>
+        <guid isPermaLink="true">http://codingnights.com/dummy3/</guid>
         
         
         <category>Dummy</category>
@@ -180,8 +180,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://codingnights.com/dummy/2015/04/18/dummy2.html</link>
-        <guid isPermaLink="true">http://codingnights.com/dummy/2015/04/18/dummy2.html</guid>
+        <link>http://codingnights.com/dummy2/</link>
+        <guid isPermaLink="true">http://codingnights.com/dummy2/</guid>
         
         
         <category>Dummy</category>
@@ -200,8 +200,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://codingnights.com/dummy/2015/04/18/dummy.html</link>
-        <guid isPermaLink="true">http://codingnights.com/dummy/2015/04/18/dummy.html</guid>
+        <link>http://codingnights.com/dummy/</link>
+        <guid isPermaLink="true">http://codingnights.com/dummy/</guid>
         
         
         <category>Dummy</category>
