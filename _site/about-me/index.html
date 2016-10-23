@@ -16,11 +16,9 @@
 
   <!-- External libraries -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
 
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
-  <!-- <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
@@ -38,7 +36,7 @@
   <link rel="manifest" href="/assets/icons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff"> -->
+  <meta name="theme-color" content="#ffffff">
 
   
 
@@ -48,8 +46,8 @@
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://codingnights.com/about-me/">
-  <link rel="alternate" type="application/rss+xml" title="Coding Nights" href="http://codingnights.com/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/about-me/">
+  <link rel="alternate" type="application/rss+xml" title="Coding Nights" href="http://localhost:4000/feed.xml" />
 </head>
 
 
@@ -85,8 +83,6 @@
         
           
           <li class="nav-link"><a href="/resources/">Resources</a></li>
-          
-        
           
         
       </ul>
@@ -166,8 +162,6 @@
         
         
           <li class="nav-link"><a href="/resources/">Resources</a>
-        
-        
         
         
       </ul>
@@ -269,14 +263,10 @@
 
 <!-- Scripts -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
 <script>
 
 $(document).ready(function() {
-
-  // Syntax highlighting
-  hljs.initHighlightingOnLoad();
 
   // Header
   var menuToggle = $('#js-mobile-menu').unbind();

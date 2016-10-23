@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Building something from scratch</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <meta name="description" content="def foo  puts 'foo'end">
   
   <meta name="author" content="Gioia Ballin">
   <meta name="copyright" content="&copy; Gioia Ballin 2016">
@@ -15,11 +15,9 @@
 
   <!-- External libraries -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
 
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
-  <!-- <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
@@ -37,7 +35,7 @@
   <link rel="manifest" href="/assets/icons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff"> -->
+  <meta name="theme-color" content="#ffffff">
 
   
 
@@ -47,8 +45,8 @@
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://codingnights.com/building-something-from-scratch/">
-  <link rel="alternate" type="application/rss+xml" title="Coding Nights" href="http://codingnights.com/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/building-something-from-scratch/">
+  <link rel="alternate" type="application/rss+xml" title="Coding Nights" href="http://localhost:4000/feed.xml" />
 </head>
 
 
@@ -84,8 +82,6 @@
         
           
           <li class="nav-link"><a href="/resources/">Resources</a></li>
-          
-        
           
         
       </ul>
@@ -124,60 +120,21 @@
 </section>
 
 <article class="post-content">
-  <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+  
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
+  <span class="nb">puts</span> <span class="s1">'foo'</span>
+<span class="k">end</span></code></pre></figure>
 
-<h2 id="adding-new-posts">Adding New Posts</h2>
-
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<h3 id="tags-and-categories">Tags and Categories</h3>
-
-<p>If you list one or more categories or tags in the front matter of your post, they will be included with the post on the page as links. Clicking the link will bring you to an auto-generated archive page for the category or tag, created using the <a href="https://github.com/jekyll/jekyll-archives">jekyll-archive</a> gem.</p>
-
-<h3 id="cover-images">Cover Images</h3>
-
-<p>To add a cover image to your post, set the “cover” property in the front matter with the relative URL of the image (i.e. <code>cover: "/assets/cover_image.jpg"</code>).</p>
-
-<h3 id="code-snippets">Code Snippets</h3>
-
-<p>You can use <a href="https://highlightjs.org/">highlight.js</a> to add syntax highlight code snippets:</p>
-
-<p>Use the <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid</a> <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">highlight</span><span class="w"> </span><span class="err">&lt;language&gt;</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code> tag to add syntax highlighting to code snippets.</p>
-
-<p>For instance, this template…</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">{% highlight javascript %}    
-function demo(string, times) {    
-  for (var i = 0; i <span class="nt">&lt; times</span><span class="err">;</span> <span class="na">i</span><span class="err">++)</span> <span class="err">{</span>    
-    <span class="na">console</span><span class="err">.</span><span class="na">log</span><span class="err">(</span><span class="na">string</span><span class="err">);</span>    
-  <span class="err">}</span>    
-<span class="err">}</span>    
-<span class="na">demo</span><span class="err">("</span><span class="na">hello</span><span class="err">,</span> <span class="na">world</span><span class="err">!",</span> <span class="na">10</span><span class="err">);</span>
-<span class="err">{%</span> <span class="na">endhighlight</span> <span class="err">%}</span></code></pre></figure>
-
-<p>…will come out looking like this:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">demo</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">times</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">times</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="nx">demo</span><span class="p">(</span><span class="s2">"hello, world!"</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span></code></pre></figure>
-
-<p>Syntax highlighting is done using <a href="https://highlightjs.org/">highlight.js</a>. You can change the active theme in <a href="https://github.com/bencentra/centrarium/blob/2dcd73d09e104c3798202b0e14c1db9fa6e77bc7/_includes/head.html#L15">head.html</a>.</p>
-
-<h3 id="images">Images</h3>
-
-<p>Lightbox has been enabled for images. To create the link that’ll launch the lightbox, add <code>data-lightbox</code> and <code>data-title</code> attributes to an <code>&lt;a&gt;</code> tag around your <code>&lt;img&gt;</code> tag. The result is:</p>
-
-<p><a href="//bencentra.com/assets/images/falcon9_large.jpg" data-lightbox="falcon9-large" data-title="Check out the Falcon 9 from SpaceX">
-  <img src="//bencentra.com/assets/images/falcon9_small.jpg" title="Check out the Falcon 9 from SpaceX" />
-</a></p>
-
-<p>For more information, check out the <a href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox</a> website.</p>
-
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
-
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-header-container has-cover"</span> <span class="na">style=</span><span class="s">"background-image: url(/assets/worker.jpg);"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"scrim has-cover"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"post-header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Building something from scratch<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>by <span class="nt">&lt;strong&gt;</span>Gioia Ballin<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
 
 </article>
 
@@ -198,7 +155,7 @@ function demo(string, times) {
   
     
     
-      <a href="//twitter.com/share?text=Building+something+from+scratch&url=http://codingnights.com/building-something-from-scratch/&via=GioiaBallin"
+      <a href="//twitter.com/share?text=Building+something+from+scratch&url=http://localhost:4000/building-something-from-scratch/&via=GioiaBallin"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
         <i class="fa fa-twitter-square fa-lg"></i>
       </a>
@@ -212,7 +169,7 @@ function demo(string, times) {
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=Building+something+from+scratch&u=http://codingnights.com/building-something-from-scratch/"
+      <a href="//www.facebook.com/sharer.php?t=Building+something+from+scratch&u=http://localhost:4000/building-something-from-scratch/"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
@@ -227,7 +184,7 @@ function demo(string, times) {
     
     
     
-      <a href="//www.linkedin.com/shareArticle?mini=true&url=http://codingnights.com/building-something-from-scratch/"
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/building-something-from-scratch/"
         onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
         <i class="fa fa-linkedin-square fa-lg"></i>
       </a>
@@ -239,7 +196,7 @@ function demo(string, times) {
     
     
     
-      <a href="//plus.google.com/share?title=Building+something+from+scratch&url=http://codingnights.com/building-something-from-scratch/"
+      <a href="//plus.google.com/share?title=Building+something+from+scratch&url=http://localhost:4000/building-something-from-scratch/"
         onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
         <i class="fa fa-google-plus-square fa-lg"></i>
       </a>
@@ -278,7 +235,7 @@ function demo(string, times) {
     
     
     
-      <a href="//www.pinterest.com/pin/create/button/?description=Building+something+from+scratch&url=http://codingnights.com/building-something-from-scratch/&media=http://codingnights.com/assets/worker.jpg"
+      <a href="//www.pinterest.com/pin/create/button/?description=Building+something+from+scratch&url=http://localhost:4000/building-something-from-scratch/&media=http://localhost:4000/assets/worker.jpg"
         onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
         <i class="fa fa-pinterest-square fa-lg"></i>
       </a>
@@ -340,7 +297,7 @@ function demo(string, times) {
     
     
     
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://codingnights.com/building-something-from-scratch/') + '&title=Building something from scratch'; return false">
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://localhost:4000/building-something-from-scratch/') + '&title=Building something from scratch'; return false">
         <i class="fa fa-reddit-square fa-lg"></i>
       </a>
     
@@ -382,8 +339,6 @@ function demo(string, times) {
         
         
           <li class="nav-link"><a href="/resources/">Resources</a>
-        
-        
         
         
       </ul>
@@ -485,14 +440,10 @@ function demo(string, times) {
 
 <!-- Scripts -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
 <script>
 
 $(document).ready(function() {
-
-  // Syntax highlighting
-  hljs.initHighlightingOnLoad();
 
   // Header
   var menuToggle = $('#js-mobile-menu').unbind();
