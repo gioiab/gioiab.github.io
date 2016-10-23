@@ -13,3 +13,4 @@ Just few notes:
 - syntax highlight powered by Pygments
 - css changed and customized (for syntax highlight purposes)
 - customized footer
+- style blockquotes
