@@ -12,3 +12,4 @@ Just few notes:
 - header char
 - syntax highlight powered by Pygments
 - css changed and customized (for syntax highlight purposes)
+- customized footer
