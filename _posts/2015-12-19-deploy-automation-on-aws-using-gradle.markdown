@@ -9,14 +9,14 @@ cover:  "/assets/worker.jpg"
 ---
 
 
-{% highlight ruby linenos=table %}
+{% highlight ruby linenos %}
 def foo
   puts 'foo'
 end
 {% endhighlight %}
 
 
-{% highlight python linenos %}
+{% highlight python %}
 def foo():
   return 'foo'
 {% endhighlight %}

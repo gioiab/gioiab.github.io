@@ -10,7 +10,7 @@ Just few notes:
 
 - header image
 - header char
-- syntax highlight powered by Pygments
+- syntax highlight powered by just Rouge
 - css changed and customized (for syntax highlight purposes)
 - customized footer
 - style blockquotes

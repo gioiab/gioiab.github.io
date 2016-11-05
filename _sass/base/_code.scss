@@ -1,13 +1,10 @@
 .highlight {
   margin: 2em 0 2.8em;
+  border: 1px solid #dee;
 
   table, tbody {
     display: block;
-    width: 100%
-  }
-
-  td {
-    border: 1px solid #dee;
+    width: 100%;
   }
 
   tr {
@@ -60,19 +57,4 @@ a code {
   text-decoration: underline;
   margin: 0 -1px;
   padding: 3px 10px;
-}
-
-.ArgumentSpec {
-  background: lighten($text-highlight, 3%);
-  padding: 1em 2em;
-  list-style-type: none;
-  line-height: 190%;
-  border-radius: 8px;
-  border: solid 1px $light-border;
-  margin: 2.5em 0 1.5em;
-
-  li strong { padding-left: 0; }
-  li code {
-    background: rgba(255, 255, 255, 0.5);
-  }
 }
