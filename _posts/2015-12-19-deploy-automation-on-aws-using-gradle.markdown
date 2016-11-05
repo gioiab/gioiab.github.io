@@ -9,7 +9,7 @@ cover:  "/assets/worker.jpg"
 ---
 
 
-{% highlight ruby linenos linenostart=3 %}
+{% highlight ruby linenos=table %}
 def foo
   puts 'foo'
 end
