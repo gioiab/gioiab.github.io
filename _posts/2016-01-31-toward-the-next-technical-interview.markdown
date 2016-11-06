@@ -53,7 +53,7 @@ If you're lucky (prepared?) enough to pass the phone screening, you will be expe
 
 In my opinion, the range of the arguments is so broad that there's no book that, once read, assures you will pass the interview. One book isn't sufficient. Many books could be enough. You will definitely need all the best sources of information at your disposal. What can be better than the Internet? You will surely need Internet, but it's very likely you will also need to refer to other sources for your preparation (books, university projects, personal projects, etc.).
 
-> There's no cookbook, no ideal formula that will safely lead you to gain the position you want at <span style="text-decoration: underline;">that</span> awesome company.
+> There's no cookbook, no ideal formula that will safely lead you to gain the position you want at __that__ awesome company.
 
 So, how can you be prepared for the next technical interview? Studying thousands books during the few days you have for preparing seems impossible to accomplish.
 
