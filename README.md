@@ -14,3 +14,4 @@ Just few notes:
 - css changed and customized (for syntax highlight purposes)
 - customized footer
 - style blockquotes
+- fixed nav-menu for jekyll archives - updated version for archives (bug for prev)
