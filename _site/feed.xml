@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding Nights</title>
+    <description>The (mis)adventures of a Python coder: human feelings and programming subjects reported with a unique frankness.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 12 Nov 2016 22:41:59 +0100</pubDate>
+    <lastBuildDate>Sat, 12 Nov 2016 22:41:59 +0100</lastBuildDate>
+    <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>Toward the next technical interview</title>
+        <description>&lt;p&gt;You’re a young undergraduate who is enjoying the university life: you’re eating, drinking and hanging out with your new vibrant friends. But, it’s not all about social activities. You’re at university, aren’t you? You chose to pursue the studies in Computer Science till this point, and now, you’re having the chance to attend inspiring courses about coding algorithms, robotics, distributed systems, so on and so forth. Realistically speaking, different courses have different inspirational degrees and this depends on a number of factors ranging from the extent of your passion for the topic to the professor’s influence level. Anyway, there’s one very important fact.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The challenges offered by (at least some) university courses make you dreaming. &lt;small&gt;(*)&lt;/small&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In the final years of my graduate studies, one challenge, among the others, completely fascinated me: the &lt;a href=&quot;https://en.wikipedia.org/wiki/P_versus_NP_problem&quot; target=&quot;_blank&quot;&gt;P versus NP problem&lt;/a&gt;. It’s still one of the most important unsolved problems in computer science regarding the algorithms’ computational complexity, and yes, it still fascinates me. In addition, this challenge is so outstanding that it’s part of the &lt;a href=&quot;http://www.claymath.org/millennium-problems&quot; target=&quot;_blank&quot;&gt;Millennium Prize Problems&lt;/a&gt;: &lt;strong&gt;whoever&lt;/strong&gt;, in the world, can come out with the solution and, if this happens, they will be awarded with one million dollars.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://s2.quickmeme.com/img/43/432d0c56973eff45e545159ddf41f282e16cdce6d2b354dfd5721962504dd252.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Soon, I began daydreaming about how it could be working on such a sort of problem. It has to be amazing, for sure. I’ve always imagined situations in which groups of inspired, smart and peaceful people work together to find out the solution to a problem. Situations in which the &lt;strong&gt;passion&lt;/strong&gt; drives the workers. These thoughts weren’t changing when I tried to imagine how working for the most blazoned software companies could be.&lt;/p&gt;
+
+&lt;p&gt;You may be wondering if all this interest and all this attraction is exclusively related to the potential achievement of &lt;strong&gt;popularity&lt;/strong&gt;. After all, saying something like &lt;em&gt;I’m a software developer at Google&lt;/em&gt; or &lt;em&gt;I’m a senior researcher at Microsoft&lt;/em&gt; still sounds impressive nowadays. And, yes, it isn’t pure invention. See for example &lt;a href=&quot;https://medium.com/this-happened-to-me/why-i-left-google-c02f1ff471c6#.e6zr2h344&quot; target=&quot;_blank&quot;&gt;the story of Ellen Huerta&lt;/a&gt;, former Googler. She had publicly disclosed her reluctancy in leaving the big G due to the company &lt;em&gt;safety and prestige&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It took me some time to understand that it’s definitely not about the prestige, the popularity, the regard of the other people and, it shouldn’t be about that. Rather, it’s about the chance of having an &lt;strong&gt;impact&lt;/strong&gt; on thousands, millions or even billions people. For example, think about how it could be working on the most widespread operating system in the world. And, what about working on the most popular search engine? Even if your contribute is minimal with respect to the overall infrastructure, your work will be delivered to thousands (or millions?) users. Thrilling.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What would have led me from the university to one of these amazing jobs?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Well, I was getting really great marks during the graduate studies and, similarly to what &lt;a href=&quot;https://twitter.com/codinghorror&quot; target=&quot;_blank&quot;&gt;Jeff Atwood&lt;/a&gt; wrote in &lt;a href=&quot;http://blog.codinghorror.com/doing-terrible-things-to-your-code/&quot; target=&quot;_blank&quot;&gt;Doing Terrible Things To Your Code&lt;/a&gt;, I thought I was one of the best students in the course, so I wasn’t worried too much.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I couldn’t be so wrong.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;After the graduation, I began attending my first interview rounds and I didn’t know what an interview could involve. I couldn’t even imagine. So, it happened I did interviews without any sort of specific preparation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://assets.amuniversal.com/e3ff66d0fd6e0132ef1a005056a9545d&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;This comic comes from &lt;a href=&quot;dilbert.com&quot; target=&quot;_blank&quot;&gt;dilbert.com&lt;/a&gt;. And, it’s funny, but being unprepared it isn’t!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Soon, really soon, I recognised the bitter truth.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Even if you think to be the best, you will need to &lt;strong&gt;prepare&lt;/strong&gt; for attending both phone screenings and technical interviews.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yeah, dude. Phone screenings requires preparation too. In particular, since it’s your very first contact with the company you should do &lt;em&gt;your homework&lt;/em&gt;, as some recruiters would say, in order to sound interesting and pass the stage. The homework typically involves the search of information about the company (99% of the times) and the study of various possible behavioural questions.&lt;/p&gt;
+
+&lt;p&gt;I personally find behavioural questions pretty boring, especially those standard, pre-packaged questions. Yes, my darling recruiter coming from a top-notch company. This. Is. Boring. What is the creativity you’re showing by asking those questions? Why are you expected to be impressed by a great candidate without being yourself great enough? Should I have to think that this is just another &lt;strong&gt;ordinary&lt;/strong&gt; interview?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The interview is also the &lt;strong&gt;chance&lt;/strong&gt; for you, as a candidate, to evaluate the company and see if it’s in line with what you’re looking for.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you’re lucky (prepared?) enough to pass the phone screening, you will be expected to attend one or more technical interview rounds. So, let’s get nerdy! It shall be more funny than the phone screening, shan’t it? Well, it depends on the type of the technical interview. In this context, you can meet very different scenarios. Indeed, you might be asked to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;solve coding problems on a whiteboard, on &lt;a href=&quot;https://coderpad.io/&quot; target=&quot;_blank&quot;&gt;coderpad&lt;/a&gt;, on &lt;a href=&quot;https://www.hackerrank.com/work&quot; target=&quot;_blank&quot;&gt;Hackerrank&lt;/a&gt;, and the list goes on, during a live interview.&lt;/li&gt;
+  &lt;li&gt;solve coding challenges at home, with or without time constraints. Often this challenges are more structured and complicated than the ones proposed during a live interview.&lt;/li&gt;
+  &lt;li&gt;answer questions which are specifically language related (e.g.: what is the meaning of the &lt;em&gt;pass&lt;/em&gt; keyword in Python?).&lt;/li&gt;
+  &lt;li&gt;deeply answer technical questions on your past projects.&lt;/li&gt;
+  &lt;li&gt;answer technical questions that explicitly relate to the position your applying for. For example, if you’re a back-end software engineer you might me asked questions about designing the entire back-end of a specific application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In my opinion, the range of the arguments is so broad that there’s no book that, once read, assures you will pass the interview. One book isn’t sufficient. Many books could be enough. You will definitely need all the best sources of information at your disposal. What can be better than the Internet? You will surely need Internet, but it’s very likely you will also need to refer to other sources for your preparation (books, university projects, personal projects, etc.).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There’s no cookbook, no ideal formula that will safely lead you to gain the position you want at &lt;strong&gt;that&lt;/strong&gt; awesome company.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, how can you be prepared for the next technical interview? Studying thousands books during the few days you have for preparing seems impossible to accomplish.&lt;/p&gt;
+
+&lt;p&gt;A couple (or more) of years ago, I was contacted by well-known software company. In my opinion, it’s still one of the best, if not the absolute best in the world. I was scheduled for a phone screening, and I easily passed. Then, I was scheduled for a technical interview with one of their software developers based in the United States. During the technical interview we had lots of problems with the call and we decided to do the interview by writing on a shared document. It’s kinda funny that a technical interview can be affected by technical problems, isn’t it? It was pretty tough to concentrate and answer in the appropriate time without letting think the interviewer I was googling the answer rather than simply thinking about the solution. I didn’t performed at my best but, I learned an important lesson that I want to share with you. The interviewer told me his story. He didn’t enter at his first application, and if I remember well, he applied three times before being hired. Furthermore, in order to be hired, he spent a lot of time preparing, and he gave me a really important suggestion.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Work with smart people.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It may seem banal, but it isn’t. Is there a better way to prepare the next technical interview than studying during your current job? That’s the way: study everyday and work with smart people! Incrementing your knowledge in the field, day by day, will surely bring you closer to what you really want to do.&lt;/p&gt;
+
+&lt;p&gt;How did it end up? I didn’t pass smoothly but, I was rescheduled for another interview, which I refused. I knew I wasn’t prepared enough and I thought that having a couple of weeks more to prepare wouldn’t have changed so much the result. And then, what happened? Then, I entered in a sort of continuous loop made of working, interviewing even if I’m working, and finally living. And now it’s tough to exit from this vicious cycle.&lt;/p&gt;
+
+&lt;p&gt;But, why did (do?) I accept interviews even if I was (am?) already employed? At the beginning, I applied such sort of behaviour in order to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;check out what the market is offering in a particular time;&lt;/li&gt;
+  &lt;li&gt;improve myself at interviewing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And, I can say these reasons still hold nowadays. Fortunately, during the last year, I began receiving proposal from various channels (the major is &lt;a href=&quot;https://www.linkedin.com/&quot; target=&quot;_blank&quot;&gt;LinkedIn&lt;/a&gt;) without doing almost nothing &lt;small&gt;&lt;em&gt;(**)&lt;/em&gt;&lt;/small&gt;. So, with an increased awareness, I accept interviews because I like to discuss about technology, I like challenging myself, I like knowing about the work in progress of other companies.&lt;/p&gt;
+
+&lt;p&gt;Pay attention. If you’re working and interviewing at the same time, don’t expect that recruiters will understand your situation. In my experience, no one really understood the toughness of this kind of situation. Recruiters only have a vision on their company and often they forget they’re actually dealing with “real” people, not just virtual voices over the phone or virtual writers on a Skype chat. Be aware of this but don’t give up.&lt;/p&gt;
+
+&lt;p&gt;So, do you have a job but recently you may have the chance to interview with &lt;strong&gt;that&lt;/strong&gt; awesome company? &lt;a href=&quot;https://www.youtube.com/watch?v=UF8uR6Z6KLc&quot; target=&quot;_blank&quot;&gt;Stay hungry, stay foolish!&lt;/a&gt; And, c’mon let’s go! Toward the next technical interview.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+(*) This is part of my personal experience and it shouldn’t be taken as the sole truth.
+&lt;br /&gt;
+(**) Well, maintaining clear information about my past and current experiences can’t really be thought as “nothing”.
+&lt;/small&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 31 Jan 2016 01:00:00 +0100</pubDate>
+        <link>http://localhost:4000/toward-the-next-technical-interview/</link>
+        <guid isPermaLink="true">http://localhost:4000/toward-the-next-technical-interview/</guid>
+        
+        <category>interview</category>
+        
+        
+        <category>life</category>
+        
+        <category>interviewing</category>
+        
+      </item>
+    
+      <item>
+        <title>Deploy automation on AWS using Gradle</title>
+        <description>&lt;p&gt;According to the &lt;a href=&quot;https://aws.amazon.com/resources/gartner-2015-mq-learn-more/&quot; target=&quot;_blank&quot;&gt;Gartner MQ 2015 report&lt;/a&gt;, Amazon with its Amazon Web Services is currently the market leader provider of IaaS services. Furthermore, it can now boast well known “unicorns” (e.g.: Airbnb, Netflix, Slack, Pinterest) among its &lt;a href=&quot;https://aws.amazon.com/solutions/case-studies/&quot; target=&quot;_blank&quot;&gt;clients&lt;/a&gt;. Apart from these success stories, relying on Amazon Web Services is also becoming a popular choice for small, innovative, high-tech businesses.&lt;/p&gt;
+
+&lt;p&gt;Different AWS tools aim to address the deployment automation problem. Here, I want to focus on &lt;a href=&quot;http://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html&quot; target=&quot;_blank&quot;&gt;AWS CodeDeploy&lt;/a&gt;. AWS CodeDeploy lets you to easily deploy applications from S3 buckets (or GitHub repositories) to EC2 instances. It’s a really easy-to-use tool but, it involves the execution of repetitive manual actions.&lt;/p&gt;
+
+&lt;p&gt;Let’s say we have a Java application built using &lt;a href=&quot;https://gradle.org/&quot; target=&quot;_blank&quot;&gt;Gradle&lt;/a&gt;. And, let’s say we want to use AWS CodeDeploy to deploy our application JAR from a S3 bucket to a EC2 instance. In order to accomplish this objective, we have to:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;build the application using Gradle, thus obtaining the JAR file&lt;/li&gt;
+  &lt;li&gt;move the JAR file into our deployment bucket on S3&lt;/li&gt;
+  &lt;li&gt;sign-in to the AWS Management Console&lt;/li&gt;
+  &lt;li&gt;open the AWS CodeDeploy console on the Deployments section&lt;/li&gt;
+  &lt;li&gt;choose “Create New Deployment”&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;in the “Create New Deployment” section, insert:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;the application name&lt;/li&gt;
+      &lt;li&gt;the deployment group&lt;/li&gt;
+      &lt;li&gt;the revision type&lt;/li&gt;
+      &lt;li&gt;the revision location&lt;/li&gt;
+      &lt;li&gt;the deployment configuration&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;click “Deploy Now”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Each time&lt;/strong&gt; we have to deploy our application, we should follow these steps in which either we do mechanical actions (e.g.: moving a file from our local development environment to the S3 deployment bucket) or we insert information known in advance. Think about having the test and staging environments running on EC2 instances. It’s very likely that performing tests in those stages will flush out bugs, thus implying a code review. In turn, any code changes will require new tests, thus entailing the deployment of the code to the test/staging deployment groups again, and again. Therefore, reducing the amount of “boilerplate actions” that should be performed to accomplish the deployment can effectively streamline the overall develop-test-and-deploy process.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Since we’re using Gradle to build our application, can we use it to create tasks that simplify our lives?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The answer is definitely yes. We can code Gradle tasks providing the capability to automatically perform specific kind of actions but, in order to do so, we need a tool for interacting with AWS services through scripts.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Does Amazon provide any tool serving our ends?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Again, the answer is yes. The tool we’re looking for is the &lt;a href=&quot;https://aws.amazon.com/cli&quot; target=&quot;_blank&quot;&gt;AWS Command Line Interface&lt;/a&gt;. The AWS CLI is shipped as a python package (so it can be installed via &lt;tt&gt;pip&lt;/tt&gt;) and it provides a complete series of commands devoted to manage, drive and control AWS services.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What’s the main idea, then?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Gradle gives the chance to execute shell scripts, thus it’s possible to write very simple bash scripts that performs the mechanical actions we wouldn’t like to do anymore and having them executed by Gradle.&lt;/p&gt;
+
+&lt;p&gt;Note: If we want to automate the deployment process in this way, the AWS CLI installation and configuration into our system is a prerequisite. Please refer to the &lt;a href=&quot;http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html&quot; target=&quot;_blank&quot;&gt;Amazon guide&lt;/a&gt; to have your environment properly set up.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Let’s start! We want to build our distribution and move it to the right S3 bucket.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;First of all, we need to write a Gradle task that produces the distribution file. The logic applied to create the distribution may vary from case to case so, I don’t want to go deeper into this implementation. Long short story, let’s say we have a Gradle task named &lt;strong&gt;buildDistribution&lt;/strong&gt; that accomplishes the purpose of making a package of our application with the AWS CodeDeploy scripts bundled inside.&lt;/p&gt;
+
+&lt;p&gt;Now, we can write a Gradle task that &lt;a href=&quot;https://docs.gradle.org/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task:dependsOn(java.lang.Object[])&quot; target=&quot;_blank&quot;&gt;dependsOn&lt;/a&gt; &lt;strong&gt;buildDistribution&lt;/strong&gt; and moves the distribution created by the &lt;strong&gt;buildDistribution&lt;/strong&gt; task to the right S3 bucket.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;// Creates a new bundle and copies it to S3&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildAndCopyDistribution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;type:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;dependsOn:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buildDistribution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Defines the path into the project of the move.sh script&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;automation/move.sh&quot;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Defines the distribution name based on the jar section&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;${jar.baseName}-${jar.version}.zip&quot;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Defines the path into the project of the distribution file&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localDist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$buildDir/distributions/${distName}&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Moves the distribution file to the right S3 bucket&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;executable&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bash&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;-c&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;sh ${move} ${localDist}&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The task definition is pretty straightforward. First of all, the task is defined to be an &lt;a href=&quot;https://docs.gradle.org/current/dsl/org.gradle.api.tasks.Exec.html&quot; target=&quot;_blank&quot;&gt;Exec&lt;/a&gt; task, meaning that it’s a task that &lt;em&gt;“executes a command line process”&lt;/em&gt; and, of course, it depends on a previous execution of the &lt;strong&gt;buildDistribution&lt;/strong&gt; task. Then, the task defines two important variables:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;strong&gt;move&lt;/strong&gt; variable contains the path to the &lt;strong&gt;move.sh&lt;/strong&gt; script. The reference folder for the path is the one in which the &lt;strong&gt;build.gradle&lt;/strong&gt; file is contained. The &lt;strong&gt;move.sh&lt;/strong&gt; script will perform the actual move of the file to the S3 bucket.&lt;/li&gt;
+  &lt;li&gt;the &lt;strong&gt;localDist&lt;/strong&gt; variable contains the path to the distribution file. Again, the reference folder is the one in which the &lt;strong&gt;build.gradle&lt;/strong&gt; file is contained.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, the task executes the &lt;strong&gt;move.sh&lt;/strong&gt; bash script with the &lt;strong&gt;localDist&lt;/strong&gt; variable as input.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What does the &lt;strong&gt;move.sh&lt;/strong&gt; script actually do?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see it directly.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;AWS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/usr/local/bin/aws&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cn-app&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;BUCKET_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;coding-nights-releases&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;FULL_BUCKET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;s3://&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUCKET_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;SOURCE_FILE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Application Name: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Full Bucket: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FULL_BUCKET&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Source file: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SOURCE_FILE&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Copies the distribution to the right S3 Bucket&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$AWS&lt;/span&gt; s3 cp &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SOURCE_FILE&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FULL_BUCKET&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Checks the result of the copy&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt; -eq 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Copy successful!&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Copy Failed!&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Basically, the script defines some well known parameters like, the application name and the release bucket name. By merging these two constants, the full S3 bucket path is obtained. &lt;strong&gt;It isn’t required to build such S3 path&lt;/strong&gt;, it essentially depends on the standard you chose to organize and manage your S3 buckets. Furthermore, you can of course decide to define the variable &lt;strong&gt;FULL_BUCKET&lt;/strong&gt; only. Once the script has acquired the bucket location and the location on your environment of the distribution file, it executes the AWS CLI command devoted to move a file to an s3 bucket and, finally, it checks the result and returns.&lt;/p&gt;
+
+&lt;p&gt;Summing up, by executing the task &lt;strong&gt;buildAndCopyDistribution&lt;/strong&gt; we package a new distribution for our application and we move it to the right S3 bucket.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Now, how can we automate the deploy of our &lt;tt&gt;cn-app&lt;/tt&gt; to the deployment group &lt;tt&gt;cn-app-test&lt;/tt&gt; (representing our test environment)?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The approach is the same used for automating the transfer of the distribution bundle. So, we need to write a Gradle task that performs the deploy of our bundle to the test environment.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;// Deploys a given revision to the test environment&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;deployOnTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;type:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Defines the path into the project of the deploy.sh script&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deploy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;automation/deploy.sh&quot;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Defines the distribution name based on the jar section&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;${jar.baseName}-${jar.deployVersion}.zip&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Deploys the given distribution to the test deployment group&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;executable&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bash&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;-c&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;sh ${deploy} test ${distName}&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Again, we’re facing with a simple task definition. First, the task is defined to be an &lt;a href=&quot;https://docs.gradle.org/current/dsl/org.gradle.api.tasks.Exec.html&quot; target=&quot;_blank&quot;&gt;Exec&lt;/a&gt; task, exactly like the &lt;strong&gt;buildAndCopyDistribution&lt;/strong&gt; task. Then, the task defines two important variables:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;strong&gt;deploy&lt;/strong&gt; variable contains the path to the &lt;strong&gt;deploy.sh&lt;/strong&gt; script. The reference folder for the path is the one in which the &lt;strong&gt;build.gradle&lt;/strong&gt; file is contained. The &lt;strong&gt;deploy.sh&lt;/strong&gt; script will perform the deploy of our bundle to the &lt;tt&gt;cn-app-test&lt;/tt&gt; deployment group.&lt;/li&gt;
+  &lt;li&gt;the &lt;strong&gt;distName&lt;/strong&gt; variable contains the name of the distribution bundle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, the task executes the &lt;strong&gt;deploy.sh&lt;/strong&gt; bash script by feeding it with the constant string “&lt;strong&gt;test&lt;/strong&gt;”, which identifies the target deployment group, and with the name of the distribution bundle.&lt;/p&gt;
+
+&lt;p&gt;You may be wondering why the constant string is needed. Indeed, it isn’t. However, think about having more deployment groups each one representing a stage in the deployment process of the same application. In this case, the &lt;strong&gt;deploy.sh&lt;/strong&gt; script is expected to perform the very same computations for every deployment group but we don’t want to cut and paste the same code changing only a constant string.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Finally, we’ve reached the end. What does the &lt;strong&gt;deploy.sh&lt;/strong&gt; script actually do?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see it.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;AWS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/usr/local/bin/aws&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cn-app&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;APPLICATION_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;DEPLOYMENT_GROUP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cn-app-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_ENV&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;BUCKET_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;coding-nights-releases&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;BUNDLE_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Application Name: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Application Environment: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_ENV&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Deployment Group: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DEPLOYMENT_GROUP&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bucket Name: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUCKET_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bundle Name: &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUNDLE_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$AWS&lt;/span&gt; s3api head-object --bucket &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUCKET_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; --key &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUNDLE_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Checks whether the distribution bundle exists on the expected S3 bucket&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt; -eq 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# If the bundle exists...&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Deploys it to the right application/deployment group&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$AWS&lt;/span&gt; deploy create-deployment &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        --application-name &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        --deployment-group-name &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DEPLOYMENT_GROUP&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        --deployment-config-name CodeDeployDefault.OneAtATime &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        --s3-location &lt;span class=&quot;nv&quot;&gt;bucket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUCKET_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;,bundleType&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;zip&quot;&lt;/span&gt;,key&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;APPLICATION_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUNDLE_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Returns an error message&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Distribution not found!&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;strong&gt;deploy.sh&lt;/strong&gt; script allows to automate the deploy of the distribution bundle stored into a S3 bucket. The automation is accomplished following three main steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;first, constant and input parameters are defined, collected and combined together in order to get the variables that really matter to the deployment process (the application name, the deployment group, the bucket name and the bundle name).&lt;/li&gt;
+  &lt;li&gt;then, the existence of the distribution bundle into the expected S3 bucket is checked by executing the &lt;a href=&quot;http://docs.aws.amazon.com/cli/latest/reference/s3api/head-object.html&quot; target=&quot;blank&quot;&gt;head-object&lt;/a&gt; AWS CLI command.&lt;/li&gt;
+  &lt;li&gt;if the distribution bundle already exists, the deploy is accomplished by means of the &lt;a href=&quot;http://docs.aws.amazon.com/cli/latest/reference/opsworks/create-deployment.html&quot;&gt;create-deployment&lt;/a&gt; AWS CLI command otherwise, an error message is returned.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You may see that the &lt;strong&gt;create-deployment&lt;/strong&gt; command requires a couple of further information, i.e. the bundle type and the deployment configuration. It’s up to you to decide which kind of bundle you want to distribute and which deployment flow you want to follow, exactly like it’s up to you to decide the naming conventions that should apply to the application name, the bucket name and the object keys.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Is that all?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yes, it is! We’re done with the deployment automation! Now, in order to deploy our application to the test deployment group, we have to first run the &lt;strong&gt;buildAndCopyDistribution&lt;/strong&gt; task and then run the &lt;strong&gt;deployOnTest&lt;/strong&gt; task.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Last but not the least… Why having two Gradle tasks instead of only one?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can of course assemble tasks so the the bundle you’re currently building is immediately deployed into your target group. However, sooner or later a bug will get out (yes, it’s sad, I know), and maybe a quick recover is even needed in that case. You cannot benefit of the deployment automation tools if you have only one macro-task which builds, moves and deploys the distribution package. So, at the end, having two tasks provides you with the chance to choose which distribution version should be shipped.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Nov 2015 01:00:00 +0100</pubDate>
+        <link>http://localhost:4000/deploy-automation-on-aws-using-gradle/</link>
+        <guid isPermaLink="true">http://localhost:4000/deploy-automation-on-aws-using-gradle/</guid>
+        
+        <category>aws</category>
+        
+        <category>gradle</category>
+        
+        <category>deploy</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Building something from scratch</title>
+        <description>&lt;p&gt;I was working as a backend Python developer for about two years. One of my ongoing projects, at that time, regarded the refactoring of a big portion of unversioned code. Well, refactoring is not the correct word to say. This code base couldn’t be simply taken and put into our repository for some simple makeover. It had to be designed and developed from scratch, again. Why? There were plenty of reasons in favour of the remaking:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the code was using library dependencies which we wouldn’t have maintained;&lt;/li&gt;
+  &lt;li&gt;the code wasn’t integrated with our main &lt;a href=&quot;https://twistedmatrix.com&quot; target=&quot;_blank&quot;&gt;Twisted&lt;/a&gt; application;&lt;/li&gt;
+  &lt;li&gt;the concurrency wasn’t handled well, and it happened we found tons of processes referring to the entry-point module within our servers;&lt;/li&gt;
+  &lt;li&gt;the code was badly written (inconsistent naming, useless complex structure);&lt;/li&gt;
+  &lt;li&gt;the code hadn’t been ever reviewed and, actually, we weren’t sure it was accomplishing the objectives at 100.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, I took the control of the situation, and I proposed and decided to make everything Twisted-based. There would have been a self-standing Twisted application doing all the stuff accomplished by the legacy code (hopefully doing them better) and an integration part, in which some of features would have been included into our main Twisted application server. That was the first time I had the chance of building an entire real-world application from scratch. It often happens to work on code that has been written by others, that has been already designed and for which the objectives are clear. So, the direction is clear. The fact is that you realise that the complexity considerably increases when you have to deal with the design and the implementation of coding solutions without having any existing reference of the direction to take. Soon, I began struggling with “Twisting” the application and, in retrospect, it was unavoidable. But, &lt;strong&gt;each difficulty in programming can be turned into knowledge&lt;/strong&gt;. While you’re struggling trying to understand new concepts, you’re actually learning. Learning what? You’re learning to solve real world problems. It’s likely that someone else, in the world, will meet the same problems you’re facing with right now. This thought drove me thinking about creating a blog. However, I also had lots of doubts.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Would I have found the time to build a blog from scratch?&lt;/p&gt;
+
+  &lt;p&gt;Would I have been able to build a blog from scratch? Have I got enough skills?&lt;/p&gt;
+
+  &lt;p&gt;Would I have found the time to make a schedule for posting?&lt;/p&gt;
+
+  &lt;p&gt;Would I have stuck to my schedule?&lt;/p&gt;
+
+  &lt;p&gt;What would I have written?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At that time, I wasn’t confident enough and, as consequence, I wasn’t able to unravel my doubts. I temporarily set aside the idea about a blog, because I felt I needed a change in my life. A life change, a job change and even (maybe) a technology change. I moved to Milan and I began working for one of the most promising Italian startups. I didn’t simply move from “somewhere really near Venice” to Milan “the metropolitan city”, I moved also from the Python world to the Java world. Here is where the (mis)adventures started, in the Java world. In few months, I learnt a number of new things I couldn’t even imagine before. I built things from scratch with an “almost unknown” technology. Like a sponge, I tried to absorb the knowledge from my colleagues. And with this experience, came the knowledge. Then again, the idea about a blog came out, along with one of the most important answers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What would I have written?&lt;/p&gt;
+
+  &lt;p&gt;Coding solutions to problems for which I struggled, results of my researches and, whatever I would have found interesting about coding and technology.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What about the other questions? I began browsing about blogging and coding. I read, I read and, again, I read. One night (yes, all this ludic activity is done at night) I was reading a &lt;a href=&quot;http://blog.codinghorror.com/our-brave-new-world-of-4k-displays/&quot; target=&quot;_blank&quot;&gt;Jeff Atwood’s blog post&lt;/a&gt; when I saw this comic coming from &lt;a href=&quot;http://dilbert.com/&quot; target=&quot;_blank&quot;&gt;dilbert.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://assets.amuniversal.com/31186d106ccb01301d50001dd8b71c47&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;The perfect representation of my existential doubts&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Even though I definitely prefer different blog posts by Jeff Atwood (discussions about displays doesn’t attract me so much), that comic was inspirational. I couldn’t stay reading others without trying doing something mine. Even if among “the others” there’s Coding Horror, of which I’m a big fan.&lt;/p&gt;
+
+&lt;p&gt;What happened then? I tried to materialise the idea about a blog till this point, in which I’m writing my very first blog post. And, I don’t know anything about the future. Does anyone know? For sure, I will try to &lt;a href=&quot;http://blog.codinghorror.com/how-to-achieve-ultimate-blog-success-in-one-easy-step/&quot; target=&quot;_blank&quot;&gt;keep jabbing, keep shipping and keep firing&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Nov 2015 01:00:00 +0100</pubDate>
+        <link>http://localhost:4000/building-something-from-scratch/</link>
+        <guid isPermaLink="true">http://localhost:4000/building-something-from-scratch/</guid>
+        
+        <category>blogging</category>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+  </channel>
+</rss>
