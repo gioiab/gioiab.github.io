@@ -4,6 +4,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-archives
+  - jekyll-redirect-from
 
 exclude:
   - "/vendor/"
