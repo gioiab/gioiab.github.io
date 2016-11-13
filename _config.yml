@@ -6,6 +6,11 @@ gems:
   - jekyll-archives
   - jekyll-redirect-from
 
+whitelist:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
+
 exclude:
   - "/vendor/"
 
