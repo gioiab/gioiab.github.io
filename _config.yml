@@ -22,6 +22,7 @@ started: 2015
 description: >
   The (mis)adventures of a Python coder: human feelings and programming subjects
   reported with a unique frankness.
+feedburner: "http://feeds.feedburner.com/CodingNights"
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
