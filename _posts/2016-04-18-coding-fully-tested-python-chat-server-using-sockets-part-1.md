@@ -271,7 +271,7 @@ if __name__ == '__main__':
     main()
 {% endhighlight %}
 
-__ That's it! __Here it is the full solution based on [the threading module](https://docs.python.org/2/library/threading.html){:target="_blank"}.
+__That's it!__ Here it is the full solution based on [the threading module](https://docs.python.org/2/library/threading.html){:target="_blank"}.
 
 {% highlight python linenos %}
 import math
