@@ -6,6 +6,7 @@ author: Gioia Ballin
 categories: life
 tags:	blogging
 cover:  "/assets/worker.jpg"
+disqus_id: 4386607351
 ---
 
 I was working as a backend Python developer for about two years. One of my ongoing projects, at that time, regarded the refactoring of a big portion of unversioned code. Well, refactoring is not the correct word to say. This code base couldn't be simply taken and put into our repository for some simple makeover. It had to be designed and developed from scratch, again. Why? There were plenty of reasons in favour of the remaking:

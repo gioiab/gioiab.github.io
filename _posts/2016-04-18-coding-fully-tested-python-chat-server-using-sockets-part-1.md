@@ -6,6 +6,7 @@ author: Gioia Ballin
 categories: programming
 tags:	python
 cover:  "/assets/texting.jpg"
+disqus_id: 4757697065
 ---
 
 Hey, guys! It's time to solve a typical interview challenge. In particular, this (and the following) post will guide you through the creation of a simple fully tested chat server using the Python programming language.

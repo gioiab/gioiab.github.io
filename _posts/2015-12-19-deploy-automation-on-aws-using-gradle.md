@@ -6,6 +6,7 @@ author: Gioia Ballin
 categories: programming
 tags:	aws gradle deploy
 cover:  "/assets/lego.jpg"
+disqus_id: 4418268075
 ---
 According to the [Gartner MQ 2015 report](https://aws.amazon.com/resources/gartner-2015-mq-learn-more/){:target="_blank"}, Amazon with its Amazon Web Services is currently the market leader provider of IaaS services. Furthermore, it can now boast well known "unicorns" (e.g.: Airbnb, Netflix, Slack, Pinterest) among its [clients](https://aws.amazon.com/solutions/case-studies/){:target="_blank"}. Apart from these success stories, relying on Amazon Web Services is also becoming a popular choice for small, innovative, high-tech businesses.
 
