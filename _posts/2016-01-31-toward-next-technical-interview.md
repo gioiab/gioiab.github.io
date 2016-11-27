@@ -6,7 +6,6 @@ author: Gioia Ballin
 categories: life interviewing
 tags:	interview
 cover:  "/assets/walker.jpg"
-disqus_id: 4538907874
 ---
 
 You're a young undergraduate who is enjoying the university life: you're eating, drinking and hanging out with your new vibrant friends. But, it's not all about social activities. You're at university, aren't you? You chose to pursue the studies in Computer Science till this point, and now, you're having the chance to attend inspiring courses about coding algorithms, robotics, distributed systems, so on and so forth. Realistically speaking, different courses have different inspirational degrees and this depends on a number of factors ranging from the extent of your passion for the topic to the professor's influence level. Anyway, there's one very important fact.
