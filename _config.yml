@@ -56,6 +56,17 @@ disqus_shortname: codingnights
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
 
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: life
+    desc: "Thoughts about life, working and blogging."
+
+  - cat: programming
+    desc: "Technical posts about programming subjects."
+
+  - cat: interviewing
+    desc: "Technical or non-technical posts about interviewing."
+
 # Social icons and sharing options
 #
 # Social settings are used in two places:
