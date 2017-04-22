@@ -27,8 +27,8 @@ From my knowledge<small>*</small>, there are two basic ways to solve this kind o
 
 Google is always such a seductive tool to look up for solutions to our problems.
 
-![](http://programmers.life/wp-content/uploads/2015/03/tirinhaEN-107.png)
-*Source: [Programmer's Life](http://programmers.life/){:target="_blank"}*
+![](/assets/programmers_life_google.png)
+*Source: [Programmer's Life](https://twitter.com/programmerslife){:target="_blank"}*
 
 Anyway, in this case, if you try googling for an answer you won't get what you really would like to. In particular, among the very first results you will find [BinaryTides](http://www.binarytides.com/){:target="_blank"} and [bogotobogo](http://bogotobogo.com/){:target="_blank"}. [BinaryTides](http://www.binarytides.com/code-chat-application-server-client-sockets-python/){:target="_blank"} provides a solution which is entirely contained in the `if __name__ == "__main__"`. On the other side, [bogotobogo](http://www.bogotobogo.com/python/python_network_programming_tcp_server_client_chat_server_chat_client_select.php){:target="_blank"} shows a slightly improved solution with respect to BinaryTides: here, the code has been structured so that the chat server is given by a function. Is this sufficient for us? Unfortunately no, it isn't.
 
