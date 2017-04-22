@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Coding a fully tested Python chat server using sockets – Part 1</title>
+  <meta name="description" content="Hey, guys! It’s time to solve a typical interview challenge. In particular, this (and the following) post will guide you through the creation of a simple ful...">
+  
+  <meta name="author" content="Gioia Ballin">
+  <meta name="copyright" content="&copy; Gioia Ballin 2017">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Hey, guys! It’s time to solve a typical interview challenge. In particular, this (and the following) post will guide you through the creation of a simple ful..." />
+  <meta property="og:url" content="http://codingnights.com" />
+  <meta property="og:site_name" content="Coding Nights" />
+  <meta property="og:title" content="Coding a fully tested Python chat server using sockets – Part 1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://codingnights.com/assets/texting.jpg" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Coding a fully tested Python chat server using sockets – Part 1">
+  <meta name="twitter:description" content="Hey, guys! It’s time to solve a typical interview challenge. In particular, this (and the following) post will guide you through the creation of a simple ful...">
+  <meta name="twitter:image" content="http://codingnights.com/assets/texting.jpg">
+  <meta name="twitter:url" content="http://codingnights.com">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://codingnights.com/coding-fully-tested-python-chat-server-using-sockets-part-1/">
+  <link rel="alternate" type="application/rss+xml" title="Coding Nights" href="http://codingnights.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Coding Nights">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="/">Coding Nights</a></li>
+        
+          
+            
+              <li class="nav-link"><a href="/about-me/">About Me</a></li>
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              <li class="nav-link"><a href="/posts/">Posts</a></li>
+            
+          
+        
+          
+            
+              <li class="nav-link"><a href="/resources/">Resources</a></li>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/texting.jpg);">
+  <div class="scrim has-cover">
+    <header class="post-header">
+      <h1 class="title">Coding a fully tested Python chat server using sockets – Part 1</h1>
+      <p class="info">by <strong>Gioia Ballin</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+<section class="post-meta">
+  <div class="post-date">April 18, 2016</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/programming">Programming</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>Hey, guys! It’s time to solve a typical interview challenge. In particular, this (and the following) post will guide you through the creation of a simple fully tested chat server using the Python programming language.</p>
+
+<p>Let’s start directly from the statement of the problem.</p>
+
+<blockquote>
+  <p>Write a very simple chat server that listens on TCP port 10000 for multiple client connections and broadcasts each incoming client message to all the other connected clients. The program should be fully tested too.</p>
+</blockquote>
+
+<p>Reading carefully, we can see the challenge is twofold. Indeed, in order to solve it, we need to:</p>
+
+<ol>
+  <li>write the code for a chat server able to broadcast messages to all the clients;</li>
+  <li>write the code for testing the chat server created at the previous point.</li>
+</ol>
+
+<p>So, <strong>the chat server code must be testable</strong> because, at the other side, <strong>we must be able to test it</strong>.</p>
+
+<p>From my knowledge<small>*</small>, there are two basic ways to solve this kind of problem with Python. The former, combines pure Python with socket programming for the implementation of the chat server and uses standard unit testing tools, i.e. the <tt>unittest</tt> module, for the creation of the tests. The latter, uses <a href="https://twistedmatrix.com/trac/" target="_blank">Twisted</a> to build up the chat server and <a href="http://twistedmatrix.com/trac/wiki/TwistedTrial" target="_blank">twisted.trial</a> for the testing purposes. In this post, we’ll leave apart Twisted for a moment and we’ll see how to implement a simple pythonic chat server with socket programming. In the next post, we’ll dive into the testing of the created chat server.</p>
+
+<blockquote>
+  <p>Let’s start!</p>
+</blockquote>
+
+<p>Google is always such a seductive tool to look up for solutions to our problems.</p>
+
+<p><img src="/assets/programmers_life_google.png" alt="" />
+<em>Source: <a href="https://twitter.com/programmerslife" target="_blank">Programmer’s Life</a></em></p>
+
+<p>Anyway, in this case, if you try googling for an answer you won’t get what you really would like to. In particular, among the very first results you will find <a href="http://www.binarytides.com/" target="_blank">BinaryTides</a> and <a href="http://bogotobogo.com/" target="_blank">bogotobogo</a>. <a href="http://www.binarytides.com/code-chat-application-server-client-sockets-python/" target="_blank">BinaryTides</a> provides a solution which is entirely contained in the <code class="highlighter-rouge">if __name__ == "__main__"</code>. On the other side, <a href="http://www.bogotobogo.com/python/python_network_programming_tcp_server_client_chat_server_chat_client_select.php" target="_blank">bogotobogo</a> shows a slightly improved solution with respect to BinaryTides: here, the code has been structured so that the chat server is given by a function. Is this sufficient for us? Unfortunately no, it isn’t.</p>
+
+<blockquote>
+  <p>What’s the main idea then?</p>
+</blockquote>
+
+<p>Ideally, we want the chat server to be an object. Furthermore, the chat server object should have two main public methods:</p>
+
+<ul>
+  <li>a <strong>start</strong> method: which actually runs the chat server.</li>
+  <li>a <strong>stop</strong> method: which stops the current execution of the chat server.</li>
+</ul>
+
+<blockquote>
+  <p>Why do we need an object with a start and a stop method?</p>
+</blockquote>
+
+<p>A unit test is a fully auto-contained piece of software. What does this software unit do once it is executed? Well, it basically initiates the context of the test, performs the checks for which it has been developed and finally, it cleans up the context. You can see clearly the reason of the <strong>start</strong> and the <strong>stop</strong> methods: we can’t have the unit test for the chat server running indefinitely so we need both a way to start it and a way to stop it once the checks are completed. This is also the reason why the solutions provided by <em>BinaryTides</em> and <em>bogotobogo</em> don’t fit the requirements of the problem statement.</p>
+
+<blockquote>
+  <p>Let’s go down deep into the solution!</p>
+</blockquote>
+
+<p>The script is quite complex, so we’re going to analyse it step by step and finally we’ll look at the overall solution.</p>
+
+<p><strong>Lines 1-8</strong> simply serves the purpose of importing the necessary packages and defining two main constants: <strong>_HOST</strong> and <strong>_PORT</strong>. These constants represent respectively the host and the port onto which the socket connection will be bound.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">select</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="n">_HOST</span> <span class="o">=</span> <span class="s">'127.0.0.1'</span>  <span class="c"># defines the host as "localhost"</span>
+<span class="n">_PORT</span> <span class="o">=</span> <span class="mi">10000</span>        <span class="c"># defines the port as "10000"</span></code></pre></figure>
+
+<p><strong>Lines 10-30</strong> defines the <em>ChatServer</em> object as a <a href="https://docs.python.org/2/library/threading.html#thread-objects" target="_blank">threading.Thread</a>. This means we’ll need to override the <strong>run()</strong> method in order to call the <strong>start()</strong> method of the parent class and get the <em>ChatServer</em> running properly. At the beginning, three main class constants are declared for the <em>ChatServer</em>:</p>
+
+<ul>
+  <li><strong>MAX_WAITING_CONNECTIONS</strong> specifies the maximum number of queued connections before the rejection will start.</li>
+  <li><strong>RECV_BUFFER</strong> specifies the size (in bytes) of the receiving buffer.</li>
+  <li><strong>RECV_MSG_LEN</strong> specifies the size (in bytes) of the placeholder contained at the beginning of the messages.</li>
+</ul>
+
+<blockquote>
+  <p>Why do we need a placeholder at the very beginning of each message?</p>
+</blockquote>
+
+<p>If we want to closely follow the problem statement, we don’t necessarily need it. Think about the situation in which the client is sending a considerable amount of data. Let’s say the client sends a 10000 bytes message while our server can receive at most 4096 bytes at a time. Now, we’re facing with a decision: we may simply assume the server collects the first 4096 bytes of every client message or we may study a solution to retrieve the full 10000 bytes message (and generally a message of any length). Let’s make things harder and try to implement a solution allowing for the complete receipt of each single message. Since TCP/IP is a stream-based protocol, we need to define our own message-based protocol on top of TCP/IP in order to distinguish the start and the end of each individual message. An easy and effective protocol, suggested in a <a href="http://stackoverflow.com/questions/17667903/python-socket-receive-large-amount-of-data" target="_blank">Stack Overflow thread</a> and applied here, expects the client prefixes each message with its length. So that’s why we introduced the <strong>RECV_MSG_LEN</strong> constant.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">ChatServer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="s">"""
+    Defines the chat server as a Thread.
+    """</span>
+
+    <span class="n">MAX_WAITING_CONNECTIONS</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">RECV_BUFFER</span> <span class="o">=</span> <span class="mi">4096</span>
+    <span class="n">RECV_MSG_LEN</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+        <span class="s">"""
+        Initializes a new ChatServer.
+
+        :param host: the host on which the server is bounded
+        :param port: the port on which the server is bounded
+        """</span>
+        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connections</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c"># collects all the incoming connections</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="bp">True</span>  <span class="c"># tells whether the server should run</span></code></pre></figure>
+
+<p>Regarding the initialisation method, there are two relevant instance variables. The former is <strong>self.connections</strong> which stores all the active connections (especially the clients’ ones), while the latter is <strong>self.running</strong> which allows us starting and stopping the <em>ChatServer</em> at will.</p>
+
+<p><strong>Lines 32-40</strong> defines the <strong>_bind_socket__function which creates the server socket, binds it to the given host and port and listens for at most __MAX_WAITING_CONNECTIONS</strong> incoming client connections.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">_bind_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        Creates the server socket and binds it to the given host and port.
+        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MAX_WAITING_CONNECTIONS</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="p">)</span></code></pre></figure>
+
+<p><strong>Lines 42-52</strong> defines the convenience method <strong>_send</strong> which prefixes a given message with its length before sending it through a given socket connection. It will be used by the server to broadcast a client message to all the other connected clients.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="k">def</span> <span class="nf">_send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="s">"""
+        Prefixes each message with a 4-byte length before sending.
+
+        :param sock: the incoming socket
+        :param msg: the message to send
+        """</span>
+        <span class="c"># Packs the message with 4 leading bytes representing the message length</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'&gt;I'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span> <span class="o">+</span> <span class="n">msg</span>
+        <span class="c"># Sends the packed message</span>
+        <span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code></pre></figure>
+
+<p><strong>Lines 54-84</strong> defines the <strong>_receive</strong> function which contains the data receipt implementation logic. According to the message protocol we’ve chosen to build over TCP/IP, each client message is prefixed by 4 bytes representing its length. So the server, at each message receipt, will unpack it and read its first 4 bytes to get the length. Once this information has been acquired, the server will call multiple times the <strong>recv</strong> method in order to get the overall message.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="k">def</span> <span class="nf">_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">):</span>
+        <span class="s">"""
+        Receives an incoming message from the client and unpacks it.
+
+        :param sock: the incoming socket
+        :return: the unpacked message
+        """</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c"># Retrieves the first 4 bytes from the message</span>
+        <span class="n">tot_len</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">tot_len</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">RECV_MSG_LEN</span><span class="p">:</span>
+            <span class="n">msg_len</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">RECV_MSG_LEN</span><span class="p">)</span>
+            <span class="n">tot_len</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg_len</span><span class="p">)</span>
+        <span class="c"># If the message has the 4 bytes representing the length...</span>
+        <span class="k">if</span> <span class="n">msg_len</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="s">''</span>
+            <span class="c"># Unpacks the message and gets the message length</span>
+            <span class="n">msg_len</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s">'&gt;I'</span><span class="p">,</span> <span class="n">msg_len</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">tot_data_len</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">while</span> <span class="n">tot_data_len</span> <span class="o">&lt;</span> <span class="n">msg_len</span><span class="p">:</span>
+                <span class="c"># Retrieves the chunk of max RECV_BUFFER size</span>
+                <span class="n">chunk</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">RECV_BUFFER</span><span class="p">)</span>
+                <span class="c"># If there isn't the expected chunk...</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">chunk</span><span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+                    <span class="k">break</span> <span class="c"># ... Simply breaks the loop</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c"># Merges the chunks content</span>
+                    <span class="n">data</span> <span class="o">+=</span> <span class="n">chunk</span>
+                    <span class="n">tot_data_len</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></code></pre></figure>
+
+<p><strong>Lines 87-104</strong> defines the <strong>_broadcast</strong> method. Given both the incoming client socket and message, it iterates over the relevant socket connections in order to spread the message to all the other connected clients using the <strong>_send</strong> method. In addition, the method detects possible client disconnections and removes the involved sockets from the list of the active sockets.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="k">def</span> <span class="nf">_broadcast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_socket</span><span class="p">,</span> <span class="n">client_message</span><span class="p">):</span>
+        <span class="s">"""
+        Broadcasts a message to all the clients different from both the server itself and
+        the client sending the message.
+
+        :param client_socket: the socket of the client sending the message
+        :param client_message: the message to broadcast
+        """</span>
+        <span class="k">for</span> <span class="n">sock</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="p">:</span>
+            <span class="n">is_not_the_server</span> <span class="o">=</span> <span class="n">sock</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span>
+            <span class="n">is_not_the_client_sending</span> <span class="o">=</span> <span class="n">sock</span> <span class="o">!=</span> <span class="n">client_socket</span>
+            <span class="k">if</span> <span class="n">is_not_the_server</span> <span class="ow">and</span> <span class="n">is_not_the_client_sending</span><span class="p">:</span>
+                <span class="k">try</span> <span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_send</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">client_message</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                    <span class="c"># Handles a possible disconnection of the client "sock" by...</span>
+                    <span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c"># closing the socket connection</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>  <span class="c"># removing the socket from the active connections list</span></code></pre></figure>
+
+<p><strong>Lines 106-147</strong> defines the <strong>_run</strong> method which implements the overall server logic. As long as the server runs, it continuously monitors all the active sockets (contained in the <strong>self.connections</strong> list) for readable activity. This process is done with the <strong>select.select __call. The __select</strong> function takes as input three lists of sockets that are, respectively, waiting for reading, writing or for an exceptional condition and, in turn, it returns the lists of socket descriptors that are readable, writeable or simply have fallen into an error status. The only list we care is the list of readable sockets. At this point, if the server socket becomes readable, the server will accept and handle a new client connection. As an addition, the server will broadcast to all the other connected clients a message telling that a new client entered the chat room. On the other hand, if a client socket becomes readable, then the server will acquire the incoming message from the client and forward it to all the other connected sockets  (except for the sending one). The broadcast is performed via the <strong>_broadcast</strong> function previously described.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="k">def</span> <span class="nf">_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        Actually runs the server.
+        """</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="p">:</span>
+            <span class="c"># Gets the list of sockets which are ready to be read through select non-blocking calls</span>
+            <span class="c"># The select has a timeout of 60 seconds</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">ready_to_read</span><span class="p">,</span> <span class="n">ready_to_write</span><span class="p">,</span> <span class="n">in_error</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[],</span> <span class="mi">60</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">sock</span> <span class="ow">in</span> <span class="n">ready_to_read</span><span class="p">:</span>
+                    <span class="c"># If the socket instance is the server socket...</span>
+                    <span class="k">if</span> <span class="n">sock</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="c"># Handles a new client connection</span>
+                            <span class="n">client_socket</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+                        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                            <span class="k">break</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">client_socket</span><span class="p">)</span>
+                            <span class="k">print</span> <span class="s">"Client (</span><span class="si">%</span><span class="s">s, </span><span class="si">%</span><span class="s">s) connected"</span> <span class="o">%</span> <span class="n">client_address</span>
+
+                            <span class="c"># Notifies all the connected clients a new one has entered</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_broadcast</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">[</span><span class="si">%</span><span class="s">s:</span><span class="si">%</span><span class="s">s] entered the chat room</span><span class="se">\n</span><span class="s">"</span> <span class="o">%</span> <span class="n">client_address</span><span class="p">)</span>
+                    <span class="c"># ...else is an incoming client socket connection</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_receive</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span> <span class="c"># Gets the client message...</span>
+                            <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+                                <span class="c"># ... and broadcasts it to all the connected clients</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">_broadcast</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="s">"</span><span class="se">\r</span><span class="s">"</span> <span class="o">+</span> <span class="s">'&lt;'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sock</span><span class="o">.</span><span class="n">getpeername</span><span class="p">())</span> <span class="o">+</span> <span class="s">'&gt; '</span> <span class="o">+</span> <span class="n">data</span><span class="p">)</span>
+                        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                            <span class="c"># Broadcasts all the connected clients that a clients has left</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_broadcast</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">Client (</span><span class="si">%</span><span class="s">s, </span><span class="si">%</span><span class="s">s) is offline</span><span class="se">\n</span><span class="s">"</span> <span class="o">%</span> <span class="n">client_address</span><span class="p">)</span>
+                            <span class="k">print</span> <span class="s">"Client (</span><span class="si">%</span><span class="s">s, </span><span class="si">%</span><span class="s">s) is offline"</span> <span class="o">%</span> <span class="n">client_address</span>
+                            <span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
+                            <span class="k">continue</span>
+        <span class="c"># Clears the socket connection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span></code></pre></figure>
+
+<p><strong>Lines 149-153</strong> defines the <strong>run</strong> method, which automatically overrides the homonym method in the parent class. It simply creates and binds the server socket using the <strong>_bind_socket</strong> function and then executes the <strong>_run</strong> method which implements the server logic.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Given a host and a port, binds the socket and runs the server.
+        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bind_socket</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run</span><span class="p">()</span></code></pre></figure>
+
+<p><strong>Lines 155-161</strong> defines the <strong>stop</strong> method which simply sets the <strong>self.running</strong> variable to <strong>False</strong> and closes the server socket connection. This will allow us to stop our server once the execution of the test cases is finished.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        Stops the server by setting the "running" flag before closing
+        the socket connection.
+        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre></figure>
+
+<p><strong>Lines 164-175</strong> defines and executes the main function. It simply creates a ChatServer object and calls its <strong>start()</strong> method.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""
+    The main function of the program. It creates and runs a new ChatServer.
+    """</span>
+    <span class="n">chat_server</span> <span class="o">=</span> <span class="n">ChatServer</span><span class="p">(</span><span class="n">_HOST</span><span class="p">,</span> <span class="n">_PORT</span><span class="p">)</span>
+    <span class="n">chat_server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="s">"""The entry point of the program. It simply calls the main function.
+    """</span>
+    <span class="n">main</span><span class="p">()</span></code></pre></figure>
+
+<p><strong>That’s it!</strong> Here it is the full solution based on <a href="https://docs.python.org/2/library/threading.html" target="_blank">the threading module</a>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">select</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="n">_HOST</span> <span class="o">=</span> <span class="s">'127.0.0.1'</span>  <span class="c"># defines the host as "localhost"</span>
+<span class="n">_PORT</span> <span class="o">=</span> <span class="mi">10000</span>        <span class="c"># defines the port as "10000"</span>
+
+<span class="k">class</span> <span class="nc">ChatServer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="s">"""
+    Defines the chat server as a Thread.
+    """</span>
+
+    <span class="n">MAX_WAITING_CONNECTIONS</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">RECV_BUFFER</span> <span class="o">=</span> <span class="mi">4096</span>
+    <span class="n">RECV_MSG_LEN</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+        <span class="s">"""
+        Initializes a new ChatServer.
+
+        :param host: the host on which the server is bounded
+        :param port: the port on which the server is bounded
+        """</span>
+        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connections</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c"># collects all the incoming connections</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="bp">True</span>  <span class="c"># tells whether the server should run</span>
+
+    <span class="k">def</span> <span class="nf">_bind_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        Creates the server socket and binds it to the given host and port.
+        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MAX_WAITING_CONNECTIONS</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="s">"""
+        Prefixes each message with a 4-byte length before sending.
+
+        :param sock: the incoming socket
+        :param msg: the message to send
+        """</span>
+        <span class="c"># Packs the message with 4 leading bytes representing the message length</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s">'&gt;I'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span> <span class="o">+</span> <span class="n">msg</span>
+        <span class="c"># Sends the packed message</span>
+        <span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">):</span>
+        <span class="s">"""
+        Receives an incoming message from the client and unpacks it.
+
+        :param sock: the incoming socket
+        :return: the unpacked message
+        """</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="c"># Retrieves the first 4 bytes from the message</span>
+        <span class="n">tot_len</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">tot_len</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">RECV_MSG_LEN</span><span class="p">:</span>
+            <span class="n">msg_len</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">RECV_MSG_LEN</span><span class="p">)</span>
+            <span class="n">tot_len</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg_len</span><span class="p">)</span>
+        <span class="c"># If the message has the 4 bytes representing the length...</span>
+        <span class="k">if</span> <span class="n">msg_len</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="s">''</span>
+            <span class="c"># Unpacks the message and gets the message length</span>
+            <span class="n">msg_len</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s">'&gt;I'</span><span class="p">,</span> <span class="n">msg_len</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">tot_data_len</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">while</span> <span class="n">tot_data_len</span> <span class="o">&lt;</span> <span class="n">msg_len</span><span class="p">:</span>
+                <span class="c"># Retrieves the chunk i-th chunk of RECV_BUFFER size</span>
+                <span class="n">chunk</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">RECV_BUFFER</span><span class="p">)</span>
+                <span class="c"># If there isn't the expected chunk...</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">chunk</span><span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+                    <span class="k">break</span> <span class="c"># ... Simply breaks the loop</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c"># Merges the chunks content</span>
+                    <span class="n">data</span> <span class="o">+=</span> <span class="n">chunk</span>
+                    <span class="n">tot_data_len</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span>
+
+
+    <span class="k">def</span> <span class="nf">_broadcast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_socket</span><span class="p">,</span> <span class="n">client_message</span><span class="p">):</span>
+        <span class="s">"""
+        Broadcasts a message to all the clients different from both the server itself and
+        the client sending the message.
+
+        :param client_socket: the socket of the client sending the message
+        :param client_message: the message to broadcast
+        """</span>
+        <span class="k">for</span> <span class="n">sock</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="p">:</span>
+            <span class="n">is_not_the_server</span> <span class="o">=</span> <span class="n">sock</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span>
+            <span class="n">is_not_the_client_sending</span> <span class="o">=</span> <span class="n">sock</span> <span class="o">!=</span> <span class="n">client_socket</span>
+            <span class="k">if</span> <span class="n">is_not_the_server</span> <span class="ow">and</span> <span class="n">is_not_the_client_sending</span><span class="p">:</span>
+                <span class="k">try</span> <span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_send</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">client_message</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                    <span class="c"># Handles a possible disconnection of the client "sock" by...</span>
+                    <span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c"># closing the socket connection</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>  <span class="c"># removing the socket from the active connections list</span>
+
+    <span class="k">def</span> <span class="nf">_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        Actually runs the server.
+        """</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="p">:</span>
+            <span class="c"># Gets the list of sockets which are ready to be read through select non-blocking calls</span>
+            <span class="c"># The select has a timeout of 60 seconds</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">ready_to_read</span><span class="p">,</span> <span class="n">ready_to_write</span><span class="p">,</span> <span class="n">in_error</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[],</span> <span class="mi">60</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">sock</span> <span class="ow">in</span> <span class="n">ready_to_read</span><span class="p">:</span>
+                    <span class="c"># If the socket instance is the server socket...</span>
+                    <span class="k">if</span> <span class="n">sock</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="c"># Handles a new client connection</span>
+                            <span class="n">client_socket</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+                        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                            <span class="k">break</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">client_socket</span><span class="p">)</span>
+                            <span class="k">print</span> <span class="s">"Client (</span><span class="si">%</span><span class="s">s, </span><span class="si">%</span><span class="s">s) connected"</span> <span class="o">%</span> <span class="n">client_address</span>
+
+                            <span class="c"># Notifies all the connected clients a new one has entered</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_broadcast</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">[</span><span class="si">%</span><span class="s">s:</span><span class="si">%</span><span class="s">s] entered the chat room</span><span class="se">\n</span><span class="s">"</span> <span class="o">%</span> <span class="n">client_address</span><span class="p">)</span>
+                    <span class="c"># ...else is an incoming client socket connection</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_receive</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span> <span class="c"># Gets the client message...</span>
+                            <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+                                <span class="c"># ... and broadcasts it to all the connected clients</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">_broadcast</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="s">"</span><span class="se">\r</span><span class="s">"</span> <span class="o">+</span> <span class="s">'&lt;'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sock</span><span class="o">.</span><span class="n">getpeername</span><span class="p">())</span> <span class="o">+</span> <span class="s">'&gt; '</span> <span class="o">+</span> <span class="n">data</span><span class="p">)</span>
+                        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+                            <span class="c"># Broadcasts all the connected clients that a clients has left</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_broadcast</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="s">"</span><span class="se">\n</span><span class="s">Client (</span><span class="si">%</span><span class="s">s, </span><span class="si">%</span><span class="s">s) is offline</span><span class="se">\n</span><span class="s">"</span> <span class="o">%</span> <span class="n">client_address</span><span class="p">)</span>
+                            <span class="k">print</span> <span class="s">"Client (</span><span class="si">%</span><span class="s">s, </span><span class="si">%</span><span class="s">s) is offline"</span> <span class="o">%</span> <span class="n">client_address</span>
+                            <span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">connections</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
+                            <span class="k">continue</span>
+        <span class="c"># Clears the socket connection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Given a host and a port, binds the socket and runs the server.
+        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bind_socket</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        Stops the server by setting the "running" flag before closing
+        the socket connection.
+        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""
+    The main function of the program. It creates and runs a new ChatServer.
+    """</span>
+    <span class="n">chat_server</span> <span class="o">=</span> <span class="n">ChatServer</span><span class="p">(</span><span class="n">_HOST</span><span class="p">,</span> <span class="n">_PORT</span><span class="p">)</span>
+    <span class="n">chat_server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="s">"""The entry point of the program. It simply calls the main function.
+    """</span>
+    <span class="n">main</span><span class="p">()</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><small>* If you know another way to solve the challenge, get in touch with me!</small></p>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/python">python</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Coding+a+fully+tested+Python+chat+server+using+sockets+%E2%80%93+Part+1&url=http://codingnights.com/coding-fully-tested-python-chat-server-using-sockets-part-1/&via=GioiaBallin"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Coding+a+fully+tested+Python+chat+server+using+sockets+%E2%80%93+Part+1&u=http://codingnights.com/coding-fully-tested-python-chat-server-using-sockets-part-1/"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http://codingnights.com/coding-fully-tested-python-chat-server-using-sockets-part-1/"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+        <i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=Coding+a+fully+tested+Python+chat+server+using+sockets+%E2%80%93+Part+1&url=http://codingnights.com/coding-fully-tested-python-chat-server-using-sockets-part-1/"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://codingnights.com/coding-fully-tested-python-chat-server-using-sockets-part-1/') + '&title=Coding a fully tested Python chat server using sockets – Part 1'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'codingnights';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Coding Nights</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+          
+            
+              <li class="nav-link"><a href="/about-me/">About Me</a>
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              <li class="nav-link"><a href="/posts/">Posts</a>
+            
+          
+        
+          
+            
+              <li class="nav-link"><a href="/resources/">Resources</a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+      <br />
+      <p>
+        <span>Made with <i class="fa fa-heartbeat fa-lg"></i> in Milan</span>
+        <br />
+        <span><i class="fa fa-copyright" aria-hidden="true"></i>2015-2017 Coding Nights</span>
+      </p>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:gioia.ballin@codingnights.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">gioia.ballin@codingnights.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://twitter.com/GioiaBallin" title="Follow me on Twitter" target="_blank">
+              <i class="fa fa-twitter"></i>
+              <span class="username">GioiaBallin</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.facebook.com/gioia.ballin" title="Friend me on Facebook" target="_blank">
+              <i class="fa fa-facebook"></i>
+              <span class="username">gioia.ballin</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.linkedin.com/in/gioiaballin/en" title="Connect with me on LinkedIn" target="_blank">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">gioiaballin</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://plus.google.com/108158390093603092684" title="Add me to your Circles" target="_blank">
+              <i class="fa fa-google-plus"></i>
+              <span class="username">gioia.ballin</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://github.com/gioiab" title="Fork me on GitHub" target="_blank">
+              <i class="fa fa-github"></i>
+              <span class="username">gioiab</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text">
+        <strong>Subscribe <a href="/feed.xml" target="_blank">via RSS</a>
+        or <a href=http://feeds.feedburner.com/CodingNights target="_blank"> FeedBurner</a></strong>
+      </p>
+      <p class="text">The (mis)adventures of a Python coder: human feelings and programming subjects reported with a unique frankness.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-71620022-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/coding-fully-tested-python-chat-server-using-sockets-part-1/',
+    'title': 'Coding a fully tested Python chat server using sockets – Part 1'
+  });
+</script>
+
+
+
+  </body>
+
+</html>
