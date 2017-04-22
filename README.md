@@ -27,4 +27,6 @@ generation of `jekyll-archives`. The change excludes from the navigation menu an
 ```
 
 ## Syntax Highlighting
-[Rouge](http://rouge.jneen.net/), the default syntax highlighter in Jekyll 3, doesn't automatically style your code. To achieve the results in Coding Nights, [Alex Peattie's blog post](https://alexpeattie.com/blog/better-syntax-highlighting-with-rouge) and [repository](https://github.com/alexpeattie/alexpeattie.com) were helpful and inspiring.
+[Rouge](http://rouge.jneen.net/), the default syntax highlighter in Jekyll 3, doesn't automatically style your code. 
+To achieve the results in Coding Nights, [Alex Peattie's blog post](https://alexpeattie.com/blog/better-syntax-highlighting-with-rouge) 
+and [repository](https://github.com/alexpeattie/alexpeattie.com) were helpful and inspiring.
